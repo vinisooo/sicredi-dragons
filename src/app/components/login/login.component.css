@@ -11,6 +11,7 @@
   background-color: #f1faee;
 }
 
+
 .login-figure{
   margin: 30px;
   border-radius: 20px;
@@ -28,6 +29,7 @@
   background-color: red;
 }
 
+
 .login-figure img {
   width: 100%;
   height: 100%;
@@ -43,6 +45,7 @@ h1 {
   color: #e63946;
 }
 
+
 .login-form header p {
   margin: 20px 0;
   margin-bottom: 30px;
@@ -54,6 +57,7 @@ h1 {
   line-height: 150%;
 }
 
+
 .login-form{
   width: 50vw;
 
@@ -63,12 +67,14 @@ h1 {
   padding: 0 120px;
 }
 
+
 .login-form form {
   display: flex;
   flex-direction: column;
 
   gap: 25px;
 }
+
 
 .login-form form button {
   background-color: #e63946;
@@ -83,6 +89,7 @@ h1 {
   transition: 0.3s ease;
 }
 
+
 .login-form form button:hover {
   filter: brightness(0.9);
 }
@@ -94,6 +101,17 @@ input {
   outline: none;
 
   border-radius: 4px;
+}
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error-message{
+  color: #e63946;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 767px) {

@@ -5,10 +5,31 @@
       <h1>Login</h1>
       <p>Insira suas informações de login pra acessar a plataforma :)</p>
     </header>
-    <form>
-      <input placeholder="Email">
-      <input placeholder="Senha">
-      <button>Entrar</button>
+    <form [formGroup]="login">
+
+      <div class="input-box">
+        <input formControlName="email" placeholder="Email">
+
+        <small class="error-message" *ngIf="login.get('email')?.errors?.['required']">
+          Email obrigatório
+        </small>
+        <small class="error-message" *ngIf="login.get('email')?.errors?.['email']">
+          Email inválido
+        </small>
+      </div>
+
+      <div class="input-box">
+        <input formControlName="password" placeholder="Senha">
+
+        <small class="error-message" *ngIf="login.get('password')?.errors?.['required']">
+          Senha obrigatória
+        </small>
+
+      </div>
+
+      <button type="submit" (click)="loginSubmit()">
+        Entrar
+      </button>
     </form>
   </div>
 
