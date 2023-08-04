@@ -1,0 +1,10 @@
+<main>
+  <h1>
+    Welcome to Sicredi Dragons!
+  </h1>
+  <ul class="d-flex gap-5 flex-wrap">
+    <li *ngFor="let dragon of dragons">
+      <app-card [dragon]="dragon"></app-card>
+    </li>
+  </ul>
+</main>
